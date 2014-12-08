@@ -4,19 +4,15 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 
-public class GUI extends JFrame{
-
+public abstract class GUI extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	private final Dimension WINDOW_SIZE = new Dimension(500,500);
 	private final String WINDOW_TITLE = "Scouts Zone";
 
-	public GUI() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public void init(){
 		config();
+		build();
 		setVisible(true);
 	}
 
@@ -27,5 +23,6 @@ public class GUI extends JFrame{
 		getContentPane().setBackground(Color.GRAY);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
+	
+	public abstract void build();
 }
